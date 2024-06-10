@@ -137,6 +137,24 @@ Node* deleteatpositon(Node* head,int k){
     return head;
 }
 
+Node* reversell(Node* head){
+    if(head == NULL) return head;
+    Node* temp = head;
+    stack<int> st;
+    while(temp != nullptr){
+        st.push(temp->data);
+        temp = temp->next;
+    }
+    temp = head;
+    while(temp != nullptr){
+        temp->data = st.top();
+        st.pop();
+        temp = temp->next;
+
+    }
+    return head;
+
+}
 int  searchinll(Node* head,int value){
    
      Node* temp = head;
@@ -174,19 +192,21 @@ int  lengthofll(Node* head){
 }
 
 int main(){
-vector<int> arr = {12,21,3,42,5,};
+vector<int> arr = {12,21,3,42,5};
 Node* head = arratoll(arr);
 
-Node* temp1 =sortll(head);
+Node* temp1 =reversell(head);
 while(temp1 != nullptr){
     cout<<temp1->data<<" ";
     temp1 = temp1->next;
 }
 cout<<endl;
+
 //sorting of ll
-  int result = searchinll(head,4);
-  cout<<result<<endl;
+//   int result = searchinll(head,4);
+//   cout<<result<<endl;
+
 //length of ll
-int length = lengthofll(head);
-cout<<"length "<<length<<endl;
+// int length = lengthofll(head);
+// cout<<"length "<<length<<endl;
 }
