@@ -191,11 +191,35 @@ int  lengthofll(Node* head){
     return cnt;
 }
 
+Node* oddevennodesll(Node* head){
+    if(head== NULL) return NULL;
+    Node* temp = head;
+    vector<int> arr;
+    while(temp != NULL && temp->next != nullptr){
+        arr.push_back(temp->data);
+        temp = temp->next->next;
+    }
+    if(temp) arr.push_back(temp->data);
+    temp = head->next;
+    while(temp != NULL && temp->next != nullptr){
+        arr.push_back(temp->data);
+        temp = temp->next->next;
+
+    }
+    if(temp) arr.push_back(temp->data);
+    int i=0;temp = head;
+    while(temp != NULL){
+        temp->data =arr[i];
+        i++;
+        temp = temp->next;
+    }
+    return head;
+}
 int main(){
-vector<int> arr = {12,21,3,42,5};
+vector<int> arr = {12,21,3,42,5,30,23,45,67};
 Node* head = arratoll(arr);
 
-Node* temp1 =reversell(head);
+Node* temp1 =oddevennodesll(head);
 while(temp1 != nullptr){
     cout<<temp1->data<<" ";
     temp1 = temp1->next;
