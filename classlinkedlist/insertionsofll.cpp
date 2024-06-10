@@ -215,11 +215,39 @@ Node* oddevennodesll(Node* head){
     }
     return head;
 }
+Node* sortzerosonestwoes(Node* head){
+    int cnt0=0;int cnt1=0;int cnt2=0;
+    Node* temp = head;
+    while(temp != NULL){
+        if(temp->data == 0){
+            cnt0++;
+
+        }else if(temp->data == 1) cnt1++;
+        else cnt2++;
+
+        temp = temp->next;
+    }
+    temp = head;
+    while(temp != NULL){
+        if(cnt0){
+            temp->data = 0;
+            cnt0--;
+        }else if(cnt1){
+            temp->data = 1;
+            cnt1--;
+        }else {
+            temp->data = 2;
+            cnt2--;
+        }
+        temp = temp->next;
+    }
+    return head;
+}
 int main(){
-vector<int> arr = {12,21,3,42,5,30,23,45,67};
+vector<int> arr = {0,2,1,2,2,0,2,1,1};
 Node* head = arratoll(arr);
 
-Node* temp1 =oddevennodesll(head);
+Node* temp1 =sortzerosonestwoes(head);
 while(temp1 != nullptr){
     cout<<temp1->data<<" ";
     temp1 = temp1->next;
