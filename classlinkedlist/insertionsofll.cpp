@@ -163,6 +163,16 @@ Node* sortll(Node* head){
     }
     return head;
 }
+int  lengthofll(Node* head){
+    int cnt =0;
+    Node* temp = head;
+    while(temp != nullptr){
+        cnt++;
+        temp= temp->next;
+    }
+    return cnt;
+}
+
 int main(){
 vector<int> arr = {12,21,3,42,5,};
 Node* head = arratoll(arr);
@@ -173,7 +183,10 @@ while(temp1 != nullptr){
     temp1 = temp1->next;
 }
 cout<<endl;
+//sorting of ll
   int result = searchinll(head,4);
   cout<<result<<endl;
-
+//length of ll
+int length = lengthofll(head);
+cout<<"length "<<length<<endl;
 }
