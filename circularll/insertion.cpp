@@ -72,11 +72,49 @@ Node* insertatanyposition(Node* head,int data,int pos){
     temp->next = newNode;
     return head;
 }
+Node* deletebeginning(Node* head){
+    Node* temp = head;
+    while(temp->next != head){
+        temp = temp->next;
+    }
+    head = head->next;
+    temp->next = head;
+  
+    return head;
+    
+}
+Node* deleteend(Node* head){
+    Node* temp = head;
+    while(temp->next->next != head){
+        temp = temp->next;
+    }
+    temp->next = head;return head;
+
+}
+Node* deleteanyposition(Node* head,int pos){
+
+Node* temp = head;
+int cnt =0;
+Node* prev = NULL;
+while(temp->next != head){
+    cnt ++;
+    if(cnt == pos){
+      prev->next = prev->next->next;
+      free(temp);
+      break;
+    }
+    prev= temp;
+    temp= temp->next;
+   
+}
+return head;
+
+}
 int main(){
 
 vector<int> arr = {32,3,4,5,8};
 Node* head = arrtocll(arr);
-Node* head1 = insertatanyposition(head,1000,5);
+Node* head1 = deleteanyposition(head,3);
 Node* temp = head1;
 do{
     cout<<temp->data<<" ";
