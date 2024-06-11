@@ -58,11 +58,25 @@ Node* insertatend(Node* head,int data){
     
     return head;
 }
+
+Node* insertatanyposition(Node* head,int data,int pos){
+    int cnt =0;
+    Node* temp = head;
+    while(temp->next != head){
+        cnt++;
+        if(cnt == (pos-1)) break;
+        temp = temp->next;
+    }
+    Node* newNode = new Node(data);
+    newNode->next = temp->next;
+    temp->next = newNode;
+    return head;
+}
 int main(){
 
 vector<int> arr = {32,3,4,5,8};
 Node* head = arrtocll(arr);
-Node* head1 = insertatend(head,1000);
+Node* head1 = insertatanyposition(head,1000,5);
 Node* temp = head1;
 do{
     cout<<temp->data<<" ";
