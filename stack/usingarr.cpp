@@ -63,11 +63,9 @@ st.push(7);
 st.push(2);
  st.traversal();
  cout<<endl;
- st.pop();
-
+ cout<<st.pop();
  st.traversal();
- cout<<endl;
- st.peek();
- cout<<endl;
+
+ 
 }
 
