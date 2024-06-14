@@ -33,7 +33,7 @@ public:
         }
     }
 
-    // Function to remove an item from front of the queue
+    
     void dequeue() {
         if (front == NULL) {
             cout << "\nQueue is empty\n";
@@ -63,7 +63,7 @@ public:
 };
 
 // Driver code
-int main(void) {
+int main() {
     // Create a queue
     Queue q;
 
@@ -79,14 +79,6 @@ int main(void) {
     // print Queue elements
     q.display();
 
-    // delete elements from Queue
-    q.dequeue();
-    q.dequeue();
-
-    cout << "\n\nafter two node deletion\n";
-
-    // print Queue elements
-    q.display();
 
     return 0;
 }

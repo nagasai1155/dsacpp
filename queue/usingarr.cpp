@@ -20,10 +20,10 @@ public:
             return;
         }
        
-        else {
+    
             queue[rear] = data;
             rear++;
-        }
+        
         return;
     }
 
@@ -68,7 +68,7 @@ int main(void) {
     q.queueEnqueue(30);
     q.queueEnqueue(40);
     q.queueEnqueue(50);
-    q.queueEnqueue(50);
+    
 
   
     q.queueDisplay();
