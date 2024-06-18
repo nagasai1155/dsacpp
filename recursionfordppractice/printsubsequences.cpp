@@ -11,6 +11,7 @@ void fun(int index ,int n,int arr[],vector<int> &ds){
         if(ds.size()==0){
             cout<<"[]";
         }
+        
         cout<<endl;
         return;
     }
