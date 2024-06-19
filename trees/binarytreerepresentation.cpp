@@ -51,7 +51,7 @@ cout<<endl;
 cout<<"inorder:";
 inorder(root);
 cout<<endl;
-cout<<"postorder :";
+cout<<"postorder : ";
 postorder(root);
 
 
