@@ -10,7 +10,7 @@ void addEdge(vector<int> adj[], int s, int d) {
 }
 
 // Print the graph
-void printGraph(vector<int> adj[], int V) {
+void printGraph(vector<int> adj[], int V   ) {
   for (int d = 0; d < V; ++d) {
     cout << "\n Vertex "
        << d << ":";
