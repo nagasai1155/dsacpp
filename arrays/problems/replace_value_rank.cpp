@@ -1,33 +1,34 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+//replacing each element of its rank in an array
+// 4 1 2 3
+#include<bits/stdc++.h>
 using namespace std;
 
-int main() {
-    vector<int> nums = {100, 25, 56, 60};
-    vector<int> sortedNums = nums; // Create a copy of the original array
+int main()
+{
+				int arr[]={100, 25, 50, 75};
+				int n=sizeof(arr)/sizeof(arr[0]);
+				int temp[n];
+						for(int i=0;i<n;i++)
+						{
+						temp[i]=arr[i];
+						}
 
-    // Sort the copy in ascending order
-    sort(sortedNums.begin(), sortedNums.end());
+				sort(temp,temp+n);
 
-    // Create a vector to store ranks
-    vector<int> ranks(nums.size());
-    for (int i = 0; i < nums.size(); i++) {
-        auto it = lower_bound(sortedNums.begin(), sortedNums.end(), nums[i]);
-        ranks[i] = distance(sortedNums.begin(), it) + 1; // Assign ranks (1-based index)
-    }
+						for(int i=0;i<n;i++)
+						{
+						for(int j=0;j<n;j++)
+						{
+						if(temp[j]==arr[i])
+						  {
+						arr[i]=j+1;
+						break;
+						  }
+						}
+				}
 
-    // Replace original array elements with ranks
-    for (int i = 0; i < nums.size(); i++) {
-        nums[i] = ranks[i];
-    }
-
-    cout << "Array after replacing with ranks: ";
-    for (int i = 0; i < nums.size(); i++) {
-        cout << nums[i] << " ";
-    }
-    cout << endl;
-
-    return 0;
-}
-
+				for(int i=0;i<n;i++)
+				{
+				cout<<arr[i]<<" ";
+				}
+     }
