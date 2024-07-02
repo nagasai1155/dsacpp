@@ -16,7 +16,7 @@ int main(){
     for(int i=0;i<s.length();i++){
         if(count[s[i]-'a']==1){
             cout<<s[i]<<endl;
-            break;
+           
         }
     }
     return 0;
