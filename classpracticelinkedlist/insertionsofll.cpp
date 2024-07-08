@@ -100,6 +100,7 @@ Node* deleteatbegining(Node* head){
     free(temp);
     return head;
 }
+
 Node* deleteatendll(Node* head){
     if(head== nullptr) return NULL;
     Node* temp = head;

@@ -9,7 +9,7 @@ int main(){
 
     string s;
     cin>>s;
-    int count[26]={0};
+    int count[26]={0};//hashing 
     for(int i=0;i<s.length();i++){
         count[s[i]-'a']++;
     }

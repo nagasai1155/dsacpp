@@ -1,0 +1,7 @@
+/ impl of stack using array
+/ impl of stack using linked list push pop travesl peek
+/blancing expression balanced {C unbalanced
+/ impl of queue using array
+/ impl of queue using linked list
+/ implementation of circular Queue using array
+/ implementation stack using Queue

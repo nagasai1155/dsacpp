@@ -52,5 +52,35 @@ int main(){
 }
 
 //1.C++ program to split the circular linked list into two halves
+//4.inserting at middle of cll
+
+// void splitList (struct Node **head1, struct Node **head2) //function to split list into two halves
+// {
+// struct Node *slow = head;
+// struct Node *fast = head;
+
+// if (head == NULL)
+// return;
+
+// while (fast->next != head && fast->next->next != head) //finding middle of the list
+// {
+// fast = fast->next->next;
+// slow = slow->next;
+// }
+
+// if (fast->next->next == head)
+// fast = fast->next;
+
+// *head1 = head;
+
+// if (head->next != head)
+// *head2 = slow->next;
+
+
+// fast->next = slow->next;
+
+
+// slow->next = head;
+// }
 //syllabus for assignment on monday is 
 //arrays,strings,recursion,ll,dll,cll,stack ,queue
