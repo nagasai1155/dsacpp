@@ -120,7 +120,7 @@ int main(){
    postorder(root);
    
    cout<<endl;
-
+cout<<"after deletion: "<<endl;
    root = deleteNode(root,89);
 
    cout<<"preorder : ";
