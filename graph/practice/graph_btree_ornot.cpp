@@ -1,5 +1,5 @@
 
-//check whether the given graph is binary tree
+//check whether the given graph is binary tree or not?.
 
 #include <iostream>
 #include <queue>
@@ -139,6 +139,6 @@ int main() {
     // Is Binary Tree a Binary Search Tree? Yes
     // End result: The given graph is a binary tree and a binary search tree.
     // Note: The given graph contains duplicate values, which will affect the binary tree property. In this case, the output is "Yes" because the binary tree property is satisfied even with duplicate values.
-    
+
 
 }
