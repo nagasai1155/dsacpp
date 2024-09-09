@@ -8,7 +8,7 @@ using namespace std;
 int main(){
 
     string s = "nagasaibalam";
-    string s1 = "balamnagasapi";
+    string s1 = "balamnagasai";
     
     //sort both strings
     sort(s.begin(), s.end());
