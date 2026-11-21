@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    string str="nagasai balam";
+    string str="nagasai is balam";
     
 
     for(int i=0;i<str.length();i++){

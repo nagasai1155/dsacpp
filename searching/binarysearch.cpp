@@ -26,7 +26,7 @@ int main(){
     //binary search in c++
     int arr[] = {22, 13, 4, 108, 40};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int x = 10;
+    int x = 108;
     int result = binarySearch(arr, 0, n - 1, x);
     (result == -1)? printf("Element is not present in array"):printf("element found");
 
